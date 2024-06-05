@@ -5,7 +5,7 @@ body {
     font-family: Source Sans Pro;
 }
 body {
-    background-color: #f9f7f7;
+    background-color: #e3d8d8 /*#f9f7f7;*/
 }
 @media (max-width: 1024px) {
     html {
