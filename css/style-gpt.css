@@ -1,0 +1,218 @@
+html, 
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+}
+
+body {
+    background-color: #f9f7f7;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 1.7vw;
+    }
+}
+
+h1, h3, h4, p, label, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;  
+}
+
+/* --------------- Global scope -------------------  */
+.container {
+    min-width: 95vw;
+}
+
+/* --------------- First header section ------------- */
+.blog-header {
+    height: 5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+#logo-img {
+    width: 2.14rem;
+    margin-left: 3.3125rem;
+}
+
+#profile-img {
+    width: 11.75rem;
+    height: 11.75rem;
+    border-radius: 50%;
+}
+
+.logo-title {
+    padding-left: 0.3125rem;
+    font-family: Roboto;
+    font-size: 1.25rem;
+    letter-spacing: -0.03rem;
+    font-weight: 700;
+}
+
+ul {
+    width: 12.5rem;
+    list-style-type: none;
+    margin-right: 3.3125rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+ul, .logo, .blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------- Hero section ---------------  */
+.blog-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: url('/images/blog-hero.jpeg') center/cover no-repeat;
+    position: relative;
+    min-height: 30.5rem;
+    padding: 0 3.3125rem 3.75rem;
+}
+
+.text-hero {
+    max-width: 64rem;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.blog-hero p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 0.9375rem;
+    margin-bottom: 0.875rem;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.1875rem;
+    letter-spacing: -0.03rem;
+    margin-bottom: 0.5em;
+}
+
+#article-preview-hero {
+    font-size: 1rem;
+    line-height: 1.25em;
+    margin-bottom: 1.5625rem;
+    padding-right: 5rem;
+}
+
+/* ---------------- Blog Article and main ----------------------- */
+main {
+    padding: 2.0625rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 22.68rem;
+}
+
+.blog-card-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 4.25rem;
+}
+
+#blog-img {
+    height: 60%;
+    border-radius: 3%;
+}
+
+.article-date, .blog-card-title, .blog-card-a {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.article-date {
+    padding-top: 0.89rem;
+}
+
+.blog-card-title {
+    font-weight: 700;
+    padding: 0.5625rem 0;
+}
+
+.blog-card-a {
+    padding-bottom: 2.56rem;
+}
+
+.recentPost {
+    margin: 0 4rem;
+}
+
+label {
+    display: flex;
+    cursor: pointer;
+    margin-top: 3.375rem;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.foot {
+    display: flex;
+    height: 6.5625rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(32, 32, 32, 1);
+    color: rgba(215, 215, 215, 1);
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+#ch {
+    display: none;
+}
+
+#ch:checked ~ .viewMoreBlogs {
+    display: flex;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+.viewMoreBlogs {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        gap: 3em;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-flow: dense;
+    }
+    label {
+        opacity: 0;
+    }
+    .viewMoreBlogs {
+        display: flex;
+    }
+}
